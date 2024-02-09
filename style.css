@@ -15,13 +15,13 @@ body {
     height: 600px;
 }
 
-#row {
+.row {
     display: flex;
     flex-direction: row;
     flex: 0;
 }
 
-#column {
+.column {
     border-style: solid;
     padding: 10px;
     width: 30px;
