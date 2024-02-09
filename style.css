@@ -10,9 +10,13 @@ body {
 #content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 600px;
 }
 
 #row {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
