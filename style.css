@@ -18,5 +18,12 @@ body {
 #row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex: 0;
+}
+
+#column {
+    border-style: solid;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
 }
