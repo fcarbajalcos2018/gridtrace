@@ -24,8 +24,35 @@ function createGrid() {
 }
 
 function perform(){
+    // Reselect the container based on its id
     const content = document.querySelector('#container');
     console.log(content);
+    // Select all rows in container
+    const rows = content.querySelectorAll('.row')
+    const rowLength = rows.length;
+    // Validate number of rows
+    if (rowLength !== 16) {
+        return;
+    }
+    // Loop through the rows
+    for (let i = 0; i < rowLength; i++){
+        const row = rows[i];
+        // Select columns in row
+        const columns = row.querySelectorAll('.column');
+        const columnLength = columns.length;
+        // Validate number of columns assuming number of rows is same as that of column
+        if (columnLength !== rowLength){
+            return
+        }
+        // Loop through the columns
+        for (let j = 0; j < columnLength; j++){
+            const gridElement = columns[j];
+            gridElement.addEventListener('mouseover', () => {
+                console.log(`${i},${j}`);
+                gridElement.classList.replace('column', 'column_hover');
+            })
+        }
+    }
 }
 
 function main(){
