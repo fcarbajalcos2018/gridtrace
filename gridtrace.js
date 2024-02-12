@@ -16,7 +16,7 @@ function createGrid() {
             const column = document.createElement('div');
             column.classList.add('column');
             column.setAttribute('id', `${i}_${j}`);
-            column.textContent = `(${i}, ${j}) `;
+            //column.textContent = `(${i}, ${j}) `;
             row.appendChild(column);
         }
     }
