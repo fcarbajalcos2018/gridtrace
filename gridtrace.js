@@ -30,17 +30,20 @@ function createContents() {
         }
     }
     console.log(container);
+    return gridSize;
 }
 
-function perform(){
+function perform(dimensions){
     // Reselect the container based on its id
     const content = document.querySelector('#container');
     console.log(content);
     // Select all rows in container
-    const rows = content.querySelectorAll('.row')
+    const rows = content.querySelectorAll('.row');
     const rowLength = rows.length;
+    console.log(rows.length);
+    console.log(dimensions + ' ' + rowLength)
     // Validate number of rows
-    if (rowLength !== 16) {
+    if (rowLength !== dimensions) {
         return;
     }
     // Loop through the rows
@@ -65,7 +68,8 @@ function perform(){
 }
 
 function main(){
-    createContents('');
-    perform();
+    const gridDimensions = createContents('');
+    console.log(gridDimensions);
+    perform(gridDimensions);
 }
 main();
