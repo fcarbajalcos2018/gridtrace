@@ -1,7 +1,14 @@
-function createGrid() {
+function createContents(dimensions) {
+    // Get HTML body container
+    const body = document.querySelector('body');
+    // Create reset button
+    const resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset';
+    body.appendChild(resetButton);
     // Get container element
-    const container = document.querySelector('#container');
-    const gridSize = 16;
+    const container = body.querySelector('#container');
+    // If no dimensions were specified, set to 16 by default
+    const gridSize = dimensions !== '' ? parseInt(dimensions) : 16;
     // Remove placeholder text
     container.innerHTML = '';
     // Primary loop for creation of row containers
@@ -16,7 +23,6 @@ function createGrid() {
             const column = document.createElement('div');
             column.classList.add('column');
             column.setAttribute('id', `${i}_${j}`);
-            //column.textContent = `(${i}, ${j}) `;
             row.appendChild(column);
         }
     }
@@ -56,7 +62,7 @@ function perform(){
 }
 
 function main(){
-    createGrid();
+    createContents('');
     perform();
 }
 main();
