@@ -7,6 +7,11 @@ body {
     align-items: center;
 }
 
+#mastercontainer {
+    display: flex;
+    flex-direction: column;
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -23,6 +28,7 @@ body {
 .column, .column_hover {
     background-color: white;
     border-style: solid;
+    border-width: 1px;
     padding: 10px;
     max-width: auto;
     max-height: auto;
