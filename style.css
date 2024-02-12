@@ -7,23 +7,29 @@ body {
     align-items: center;
 }
 
-#content {
+#container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 500px;
-    height: 600px;
+    width: 1000px;
+    height: 1000px;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    flex: 0;
+    flex: 1;
 }
 
-.column {
+.column, .column_hover {
+    background-color: white;
     border-style: solid;
     padding: 10px;
-    width: 30px;
-    height: 30px;
+    max-width: auto;
+    max-height: auto;
+    display: flex;
+    flex: 1;
+}
+
+.column_hover {
+    background-color: blue;
 }
