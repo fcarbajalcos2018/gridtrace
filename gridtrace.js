@@ -1,4 +1,6 @@
-function createContents(dimensions) {
+function createContents() {
+    // Prompt user to specify dimensions, or grid size
+    const dimensions = prompt('Enter a size for your grid');
     // Get HTML body container
     const body = document.querySelector('body');
     // Get container element
