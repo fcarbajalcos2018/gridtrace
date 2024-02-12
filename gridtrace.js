@@ -1,12 +1,13 @@
 function createContents(dimensions) {
     // Get HTML body container
     const body = document.querySelector('body');
+    // Get container element
+    const container = body.querySelector('#container');
     // Create reset button
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset';
-    body.appendChild(resetButton);
-    // Get container element
-    const container = body.querySelector('#container');
+    // Insertion of the button prior to container
+    body.insertBefore(resetButton, container);
     // If no dimensions were specified, set to 16 by default
     const gridSize = dimensions !== '' ? parseInt(dimensions) : 16;
     // Remove placeholder text
