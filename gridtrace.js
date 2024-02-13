@@ -62,7 +62,12 @@ function perform(dimensions){
             const gridElement = columns[j];
             gridElement.addEventListener('mouseover', () => {
                 console.log(`${i},${j}`);
-                gridElement.classList.replace('column', 'column_hover');
+                let rgb = [];
+                for (let c = 0; c < 3; c++){
+                    const colour = Math.floor(Math.random() * 255);
+                    rgb.push(colour);
+                }
+                gridElement.style.background = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
             })
         }
     }
