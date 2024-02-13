@@ -25,7 +25,7 @@ button {
     flex: 1;
 }
 
-.column, .column_hover {
+.column {
     background-color: white;
     border-style: solid;
     border-width: 1px;
@@ -34,8 +34,4 @@ button {
     max-height: auto;
     display: flex;
     flex: 1;
-}
-
-.column_hover {
-    background-color: blue;
 }
