@@ -7,6 +7,7 @@ function createContents() {
     const container = body.querySelector('#container');
     // Create reset button
     const resetButton = document.createElement('button');
+    // Set text to button
     resetButton.textContent = 'Reset';
     // Insertion of the button prior to container
     body.insertBefore(resetButton, container);
@@ -67,9 +68,27 @@ function perform(dimensions){
     }
 }
 
+function deleteContents(){
+    const body = document.querySelector('body');
+    const button = document.querySelector('button');
+    body.removeChild(button);
+    const container = document.querySelector('#container');
+    container.innerHTML = '';
+    console.log(container);
+}
+
+function resetGrid(){
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+        deleteContents();
+        main();
+    });
+}
+
 function main(){
-    const gridDimensions = createContents('');
+    const gridDimensions = createContents();
     console.log(gridDimensions);
     perform(gridDimensions);
+    resetGrid();
 }
 main();

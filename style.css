@@ -12,11 +12,6 @@ button {
     font-size: 30px;
 }
 
-#mastercontainer {
-    display: flex;
-    flex-direction: column;
-}
-
 #container {
     display: flex;
     flex-direction: column;
